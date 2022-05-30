@@ -28,14 +28,11 @@ public class ReadCSV {
         int totalParts = ReadCSV.metadata.size();
         String dato = scan.next();
         dato.toString();
+        System.out.println("Datos del año " + dato + ":");
         for (int i = 0; i < totalParts; i++) {
             if (dato.compareTo(ReadCSV.metadata.get(i)[0]) == 0) {
-                System.out.println("Dato encontrado");
-                for (int j = 1;j < totalParts; j++) {
-                    System.out.println(ReadCSV.metadata.get(j)[1]);
-                }
+                System.out.println(ReadCSV.metadata.get(i)[1]);
                 found = true;
-                break;
             }
         }
         if (found == false) {
@@ -48,6 +45,7 @@ public class ReadCSV {
         String palabra = scan.next();
         System.out.println("Los hechos importantes con la palabra " + palabra + " son: ");
         int contador = 0;
+        //usar el ignorecase
         for (int i = 1; i < ReadCSV.metadata.size(); i++) {
             if (ReadCSV.metadata.get(i)[1].contains(palabra) == true) {
                 System.out.print("En el año " + ReadCSV.metadata.get(i)[0] + ":");
