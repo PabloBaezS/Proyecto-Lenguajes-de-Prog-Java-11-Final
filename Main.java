@@ -4,6 +4,7 @@ public class Main extends ReadCSV{
     public static void main(String[] args) {
         Scanner scan  = new Scanner(System.in);
         int ciclo = 0;
+        int caso = 0;
         while(ciclo == 0) {
             System.out.println("|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|");
             System.out.println("|/         PROYECTO DE LENGUAJES DE PROG         /|");
@@ -14,27 +15,30 @@ public class Main extends ReadCSV{
             System.out.println("|/    (4) Para buscar hechos por texto           /|");
             System.out.println("|/    (0) Para Salir                             /|");
             System.out.println("|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|");
-            int caso = scan.nextInt();
-            // Switch case para analizar el input del usuario
-            switch (caso) {
-                case 0: //Caso para salir del programa
-                    System.out.println("Gracias por usar el programa!");
-                    ciclo = 1;
-                    break;
-                case 1: // Caso para leer el csv
-                    ReadCSV.leerCSV();
-                    System.out.println("CSV leido con exito, ya puede ser usado!");
-                    break;
-                case 2:
-                    ReadCSV.hechosAños();
-                    break;
-                case 3:
-                    ReadCSV.hechosPalabra();
-                    break;
-                case 4:
+            System.out.print("|/ Ingrese una opcion --> ");
+            if (scan.hasNextInt()) {
+                caso = scan.nextInt();
+            }
+                // Switch case para analizar el input del usuario
+                switch (caso) {
+                    case 0: //Caso para salir del programa
+                        System.out.println("Gracias por usar el programa!");
+                        ciclo = 1;
+                        break;
+                    case 1: // Caso para leer el csv
+                        ReadCSV.leerCSV();
+                        break;
+                    case 2: // Caso para usar el programa ingresando un año
+                        ReadCSV.hechosAños();
+                        break;
+                    case 3: // Caso para usar el programa ingresando una palabra
+                        ReadCSV.hechosPalabra();
+                        break;
+                case 4: // Caso para usar el programa ingresando un texto
                     ReadCSV.hechosTexto();
                     break;
             }
         }
     }
 }
+
