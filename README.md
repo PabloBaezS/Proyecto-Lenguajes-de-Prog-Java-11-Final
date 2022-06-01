@@ -20,6 +20,3 @@ Realizaremos busquedas, relacionando inputs con datos y hechos importantes. Apli
 
 
 ![java](https://www.invivoo.com/wp-content/uploads/java11.png)
-
-![eafit]([https://www.eafit.edu.co/SiteCollectionImages/logo.png](https://upload.wikimedia.org/wikipedia/commons/b/bf/EAFIT-2015.png))
-
