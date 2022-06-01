@@ -98,8 +98,8 @@ public class Methods {
         System.out.println("___ (4) Buscar hechos importantes por texto ___ ");
         System.out.print("Ingrese el texto clave para buscar (Nota: el texto puede contener 2 o 3 palabras clave): ");
         String texto = scan.nextLine();
-        if (texto != " ") {
-             String[] cadenatexto = texto.split(" ");
+        if (texto != "") {
+            String[] cadenatexto = texto.split(" ");
             int contador = 0;
         /*
          Recorre el arreglo comparando la columna 2 (hechos) con el texto ingresado,

@@ -24,6 +24,7 @@ public class Main{
                 caso = scan.nextInt();
             }else{
                 System.out.println("Inicie de nuevo el programa ingresando un entero valido!");
+                caso = 0;
             }
             // Switch case para analizar el input del usuario
             switch (caso) {
@@ -47,4 +48,3 @@ public class Main{
         }
     }
 }
-
